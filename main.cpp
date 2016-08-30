@@ -7,14 +7,14 @@
 
 int main(int argc, char *argv[])
 {
-	QApplication a(argc, argv);
-	QColorCheck w;
+	QApplication *app = new QApplication(argc, argv);
+	QColorCheck *w = new QColorCheck;
 
 #ifdef SHOW_FULLSCREEN
-	w.showFullScreen();
+	w->showFullScreen();
 #else
-	w.show();
+	w->show();
 #endif
 
-	return a.exec();
+	return app->exec();
 }
