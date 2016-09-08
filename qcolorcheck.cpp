@@ -31,7 +31,9 @@ void QColorCheck::layoutWindow()
 	QVBoxLayout *layout = new QVBoxLayout;
 	QLabel *label;
 
-	for (int i = 0; i < 2; i++) {
+    int end = height() < 500 ? 1 : 2;
+
+	for (int i = 0; i < end; i++) {
 		label = new QLabel("Red");
 		label->setAlignment(Qt::AlignCenter);
 		label->setStyleSheet("background-color: red; color: white");
@@ -53,7 +55,7 @@ void QColorCheck::layoutWindow()
 	m_timerLabel->setStyleSheet("background-color: white; color: black");
 	layout->addWidget(m_timerLabel);
 
-	for (int i = 0; i < 2; i++) {
+	for (int i = 0; i < end; i++) {
 		label = new QLabel("Red");
 		label->setAlignment(Qt::AlignCenter);
 		label->setStyleSheet("background-color: red; color: white");
